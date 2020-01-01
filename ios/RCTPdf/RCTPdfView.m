@@ -51,8 +51,6 @@ const float MIN_SCALE = 1.0f;
 {
     self = [super init];
 	
-    [[UIView appearance] setBackgroundColor:[UIColor colorWithRed:235.0f/255.0f green:235.0f/255.0f blue:235.0/255.0f alpha:1.0f]];
-	
     if (self) {
         
         _page = 1;
@@ -72,10 +70,13 @@ const float MIN_SCALE = 1.0f;
         _pdfView.autoScales = YES;
         _pdfView.displaysPageBreaks = YES;
         _pdfView.displayBox = kPDFDisplayBoxCropBox;
+	[_pdfView setBackgroundColor:[UIColor colorWithRed:235.0f/255.0f green:235.0f/255.0f blue:235.0/255.0f alpha:1.0f]];
+
         
         _fixScaleFactor = -1.0f;
         _initialed = NO;
         _changedProps = NULL;
+	    
         
         [self addSubview:_pdfView];
         
