@@ -50,6 +50,9 @@ const float MIN_SCALE = 1.0f;
 - (instancetype)init
 {
     self = [super init];
+	
+    [[UIView appearance] setBackgroundColor:[UIColor colorWithRed:235.0f/255.0f green:235.0f/255.0f blue:235.0/255.0f alpha:1.0f]];
+	
     if (self) {
         
         _page = 1;
